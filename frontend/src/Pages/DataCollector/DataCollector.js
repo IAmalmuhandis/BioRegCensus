@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './DataCollectorDashboard.css';
-import UserProfile from './UserProfile';
-import DataCollectionForm from './DataCollectionForm';
-import DataVisualization from './DataVisualization';
+import './dataCollector.css';
+// import UserProfile from '../../components/UserProfile/UserProfile';
+// import DataCollectionForm from '../../components/DataCollectionForm/DatacollectionForm';
+// import DataVisualization from '../../components/DataVisualisation/DataVisualisation';
 
 const DataCollectorDashboard = ({ user }) => {
   const [collectedData, setCollectedData] = useState([]);
@@ -15,17 +15,7 @@ const DataCollectorDashboard = ({ user }) => {
   return (
     <div className="data-collector-dashboard">
       <h1>Data Collector Dashboard</h1>
-      <div className="dashboard-container">
-        <div className="dashboard-section">
-          <UserProfile user={user} />
-        </div>
-        <div className="dashboard-section">
-          <DataCollectionForm onSubmit={handleDataCollection} />
-        </div>
-        <div className="dashboard-section">
-          <DataVisualization data={collectedData} />
-        </div>
-      </div>
+    
     </div>
   );
 };
