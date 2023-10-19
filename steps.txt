@@ -1,0 +1,60 @@
+Common Components:
+
+1. **Header Component:** Shared by all pages for navigation links, logo, and user login/logout controls.
+
+2. **Error Page Component:** Displayed when there are issues with data submission or other errors, with a link back to the relevant page.
+
+Home Page:
+
+- **Home Page:**
+  - **Header Component:** Navigation links, logo, and user login/logout controls.
+  - **Hero Section:** A brief introduction to the system's purpose and features.
+  - **User Registration and Login Links:** Buttons or links to navigate to the user registration and login pages.
+
+**User Registration and Login:**
+
+- **User Registration Page:**
+  - Registration Form Component: Input fields for user information (name, email, password, contact details).
+  - Submit Button: To register the user.
+
+- **User Login Page:**
+  - Login Form Component: Fields for username/email and password.
+  - Login Button: To authenticate users.
+
+**Data Collector (User) Pages:**
+
+- **Data Collector Dashboard:**
+  - User Profile Component: Display the data collector's basic information.
+  - Data Collection Form Component: Form for data collectors to enter demographic information of citizens.
+  - Submit Button: To send the collected data to the backend.
+  - Data Visualization Component: Basic charts or graphs displaying data collected by the specific data collector.
+
+- **Data Collector Profile Page:**
+  - User Profile Component: Detailed view of the data collector's information.
+  - Edit User Information Component: Form to edit data collector details (e.g., contact information).
+
+**Admin Pages:**
+
+- **Admin Dashboard:**
+  - Admin Panel Component: Controls for data management, user management, and reporting.
+  - User Management Component: List of registered data collectors, with options to edit or delete their profiles.
+  - Data Analysis and Reporting Component: Tools for generating reports on population demographics.
+
+- **Data Collector Management Page:**
+  - User Management Component: List of registered data collectors, with options to edit or delete their profiles.
+  - Add Data Collector Component: Form to register new data collectors.
+
+- **Data Collector Profile Page (Admin):**
+  - User Profile Component: Detailed view of a data collector's information.
+  - Edit Data Collector Information Component: Form to edit data collector details (e.g., contact information).
+
+- **Data Analysis and Reporting Page (Admin):**
+  - Report Generation Form: Fields to specify report criteria, such as date range, demographics,
+   and report format (PDF, CSV, etc.).
+  - Generated Report Component: Display or download the generated report.
+
+This structured layout now includes the Home Page, 
+which serves as the entry point to your system, 
+providing an introduction to your system's purpose and options for user registration and login. 
+The addition of the Home Page helps users understand the system's 
+functionality and navigate to the appropriate sections of the application.

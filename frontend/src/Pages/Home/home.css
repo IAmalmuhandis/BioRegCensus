@@ -1,0 +1,78 @@
+/* Header Styles */
+/* Header Styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 121, 107, 0.7), rgba(0, 121, 107, 0.7)), url('../../assets/Images/census-image.jpg') center/cover no-repeat;
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+  /* Rest of your styles remain the same */
+  
+  .hero-title {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cta-button {
+    background-color: #00796B;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .cta-button:hover {
+    background-color: #005A4A;
+  }
+  
+  /* Features Section Styles */
+  .features-section {
+    background-color: #F0F0F0;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .features-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 36px;
+    margin-right: 20px;
+  }
+  
+  .feature-icon-content {
+    color: #00796B;
+  }
+  
+  .feature-text h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .feature-text p {
+    font-size: 16px;
+  }
+  
