@@ -7,14 +7,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <h3>Your Logo</h3>
+        <img className="logo" src="census-logo.png" alt="Logo" />
         </div>
         <div className="footer-links">
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>
             <li><Link to="/data-collection">Data Collection</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/user-profile">Profile</Link></li>
           </ul>
         </div>
       </div>

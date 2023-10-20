@@ -1,0 +1,59 @@
+/* userProfile.css */
+
+.user-profile {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 5px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .edit-button {
+    background-color: #00796B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  .edit-button:hover {
+    background-color: #005A4A;
+  }
+  
+  .edit-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .save-button, .cancel-button {
+    background-color: #00796B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover, .cancel-button:hover {
+    background-color: #005A4A;
+  }
+  

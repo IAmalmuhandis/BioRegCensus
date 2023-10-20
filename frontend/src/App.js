@@ -11,7 +11,10 @@ function App() {
         <Route path="/" element={ <Home/> } />
         <Route path="/login" element={ <Login/> } />
         <Route path="/register" element={ <Register/> } />
-        <Route path="/dashboard" element={ <DataCollector user={{name: "boy"}}/> } />
+        <Route path="/dashboard" element={ <DataCollector user={{toRender: "dashboard",name: "boy",email:"fjk"}}/> } />
+        <Route path="/user-profile" element={ <DataCollector  user={{toRender: "profile", name: "boy",email:"fjk"}}/> } />
+        <Route path="/data-collection" element={ <DataCollector user={{toRender: "data-Collection",name: "boy",email:"fjk"}}/> } />
+        <Route path="/data-visualisation" element={ <DataCollector user={{toRender: "data-visualisation",name: "boy",email:"fjk"}}/> } />
       </Routes>
     </>
   );

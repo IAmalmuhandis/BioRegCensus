@@ -7,8 +7,8 @@ const Header = ({ user, onLogout }) => {
   return (
     <header className="header">
       <nav className="navbar">
-        <div className="logo">
-          <Link to="/">Your Logo</Link>
+        <div className="logo-box">
+          <Link to="/"><img className="logo"   src="census-logo.png" alt="Logo" /></Link>
         </div>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>

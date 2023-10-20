@@ -1,0 +1,43 @@
+.dashboard-overview {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .dashboard-overview h2 {
+    margin-bottom: 20px;
+  }
+  
+  .overview-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .overview-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .overview-title {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .overview-number {
+    font-size: 36px;
+    color: #00796B; /* You can use your chosen color */
+    margin: 10px 0;
+  }
+  
+  .overview-chart {
+    width: 50%;
+  }
+  
+  /* You can add more styling as needed */
+  

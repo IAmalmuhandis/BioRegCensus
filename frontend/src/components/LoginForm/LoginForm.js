@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './loginForm.css';
-import { Link } from 'react-router-dom';
+import { Link,  useNavigate  } from 'react-router-dom';
+
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -14,9 +16,22 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log(formData.email);
-    console.log(formData.password)
+    // Get user data from local storage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Find the user with the provided email
+    const user = users.find((user) => user.email === formData.email);
+
+    // Check if a user with the provided email exists and if the password matches
+    if (user && user.password === formData.password) {
+      // User is authenticated, you can perform additional actions if needed
+      console.log('Authentication successful');
+      // Redirect to a dashboard or home page after successful login
+      navigate('/dashboard');
+    } else {
+      // Authentication failed, show an error message
+      console.log('Authentication failed. Please check your email and password.');
+    }
   };
 
   return (

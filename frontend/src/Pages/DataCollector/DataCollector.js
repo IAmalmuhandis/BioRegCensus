@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Sidebar from '../../components/SideBar/SideBar';
 import './dataCollector.css';
-// import UserProfile from '../../components/UserProfile/UserProfile';
-// import DataCollectionForm from '../../components/DataCollectionForm/DatacollectionForm';
-// import DataVisualization from '../../components/DataVisualisation/DataVisualisation';
+import DashboardOverview from '../../components/Dashboard/Dashboard';
+import UserProfile from '../../components/UserProfile/UserProfile';
+import DataCollectionForm from '../../components/DataCollectionForm/DatacollectionForm';
+import DataVisualisation from '../../components/DataVisualisation/DataVisualisation';
 
-const DataCollectorDashboard = ({ user }) => {
-  const [collectedData, setCollectedData] = useState([]);
 
-  const handleDataCollection = (data) => {
-    // Add the collected data to the state or send it to the backend
-    setCollectedData([...collectedData, data]);
-  };
-
+const DataCollector = ({user}) => {
+  const totalPeople = 500; // Replace with actual data
+  const otherData = [150, 250, 300, 100, 200]; // Replace with actual data
   return (
-    <div className="data-collector-dashboard">
-      <h1>Data Collector Dashboard</h1>
-    
-    </div>
+    <>
+      <Sidebar />
+      <div className="dashboard-content">
+        {/* <h1>Data Collector Dashboard</h1> */}
+        {user.toRender === "profile" ? <UserProfile user={user} /> : user.toRender === "data-Collection" ? <DataCollectionForm/> : 
+         user.toRender === "data-visualisation" ? <DataVisualisation/> : <DashboardOverview totalPeople={totalPeople} otherData={otherData}  />}
+        
+      </div>
+    </>
   );
 };
 
-export default DataCollectorDashboard;
+export default DataCollector;
