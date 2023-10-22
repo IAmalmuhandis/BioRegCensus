@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './dataVisualisation.css';
-import Chart from 'chart.js/auto'; // Import Chart from 'chart.js/auto'
+import Chart from 'chart.js/auto';
 
 const dummyData = [
   { month: 'Jan', progress: 80 },
@@ -21,6 +21,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 const DataAnalytics = () => {
   const [year, setYear] = useState(2023);
+  const [tableData, setTableData] = useState(JSON.parse(localStorage.getItem('collectedData')) || []);
 
   const chartData = {
     labels: months,
@@ -34,19 +35,30 @@ const DataAnalytics = () => {
     ],
   };
 
-  let chartInstance = null;
-
   const chartRef = useRef(null);
 
   useEffect(() => {
     // Create the chart
     if (chartRef.current) {
-      chartInstance = new Chart(chartRef.current, {
+      const chartInstance = new Chart(chartRef.current, {
         type: 'bar',
         data: chartData,
       });
+
+      return () => {
+        // Cleanup by destroying the chart
+        chartInstance.destroy();
+      };
     }
   }, [chartData]);
+
+  // Function to delete an entry from the list
+  const handleDeleteEntry = (index) => {
+    const updatedTableData = [...tableData];
+    updatedTableData.splice(index, 1);
+    setTableData(updatedTableData);
+    localStorage.setItem('collectedData', JSON.stringify(updatedTableData));
+  };
 
   return (
     <div className="data-analytics">
@@ -63,6 +75,38 @@ const DataAnalytics = () => {
       </div>
       <div className="chart-container">
         <canvas ref={chartRef}></canvas>
+      </div>
+      <div className="citizen-table">
+        <h3>Citizen Data</h3>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableData.map((citizen, index) => (
+              <tr key={index}>
+                <td>{citizen.name}</td>
+                <td>{citizen.age}</td>
+                <td>{citizen.address}</td>
+                <td>{citizen.phone}</td>
+                <td>
+                  <button
+                    onClick={() => handleDeleteEntry(index)}
+                    className="delete-button"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

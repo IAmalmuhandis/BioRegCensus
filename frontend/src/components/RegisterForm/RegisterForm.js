@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './registerForm.css';
 import { Link, useNavigate } from 'react-router-dom';
-
 const RegisterForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -49,7 +48,6 @@ const RegisterForm = () => {
     // Show a success message after successful registration
     setSuccessMessage('Registration successful! You can now log in.');
   };
-
   return (
     <div className="register-form-container">
       <h2 className="form-title">Register</h2>
@@ -105,5 +103,4 @@ const RegisterForm = () => {
     </div>
   );
 };
-
 export default RegisterForm;
